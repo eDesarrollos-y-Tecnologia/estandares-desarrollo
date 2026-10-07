@@ -10,20 +10,21 @@ para el equipo y como contexto para asistentes de IA.
 ```
 frontend/
   astro/   → proyectos Astro con islas React (admin + sitio público)
-  react/   → proyectos React (pendiente)
+  react/   → proyectos React + TanStack Router + antd
 backend/
   php/     → API en PHP (pendiente)
 ```
 
-Cada stack tiene su propio `README.md` con el índice de sus guías y el flujo
-paso a paso para las tareas más comunes.
+Cada stack tiene una guía de entrada con el índice de sus guías y el flujo paso
+a paso para las tareas más comunes (`README.md` en Astro, `creacionModulo.md` en
+React).
 
 ## Índice
 
 | Stack | Ubicación                                        | Estado     |
 | ----- | ------------------------------------------------ | ---------- |
 | Astro | [frontend/astro/](./frontend/astro/README.md)    | Disponible |
-| React | `frontend/react/`                                | Pendiente  |
+| React | [frontend/react/](./frontend/react/creacionModulo.md) | Disponible |
 | PHP   | `backend/php/`                                   | Pendiente  |
 
 ### Astro
@@ -35,6 +36,17 @@ paso a paso para las tareas más comunes.
 | [componentes.md](./frontend/astro/componentes.md)     | Reglas generales de componentes React y llamadas a la API         |
 | [listado.md](./frontend/astro/listado.md)             | Vista índice del admin (`Tabla`, búsqueda, eliminar)              |
 | [formulario.md](./frontend/astro/formulario.md)       | Vista detalle/alta del admin (`react-hook-form` + shadcn `Field`) |
+
+### React
+
+| Guía                                                        | Para qué                                                                |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------- |
+| [creacionModulo.md](./frontend/react/creacionModulo.md)     | Guía principal: pasos para crear un módulo CRUD completo               |
+| [general.md](./frontend/react/general.md)                   | Estructura del proyecto, aliases, estilos, menú y reglas de código      |
+| [modelos.md](./frontend/react/modelos.md)                   | Clases en `src/models/` (`ModeloBase`, endpoints, columnas, expand)     |
+| [index.md](./frontend/react/index.md)                       | Vista de listado `index.tsx` (`CrudHeader`, `TablaQuery`)               |
+| [detalle.md](./frontend/react/detalle.md)                   | Vista de alta/edición `detalle.tsx` (`DetalleLayout`, `usePagina`)      |
+| [formulario.md](./frontend/react/formulario.md)             | Formulario en `-components/` (`EdForm`, antd `Form.Item`, `SelectorQuery`) |
 
 ## Formato de una guía
 
@@ -51,8 +63,8 @@ Todas las guías siguen la misma estructura:
 1. Crea el archivo en `<capa>/<stack>/` (ej. `backend/php/controlador.md`), en
    minúsculas y con el nombre del concepto que documenta.
 2. Sigue el [formato](#formato-de-una-guía).
-3. Agrégala a la tabla del `README.md` del stack y, si es un stack nuevo, a la
-   tabla de [Índice](#índice) de este archivo.
+3. Agrégala a la guía de entrada del stack y a su tabla en este archivo; si es
+   un stack nuevo, también a la tabla de [Índice](#índice).
 4. Si cambias una regla, actualiza también la plantilla y las guías que la
    mencionan.
 
