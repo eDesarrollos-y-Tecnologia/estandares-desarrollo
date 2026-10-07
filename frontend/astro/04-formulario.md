@@ -2,8 +2,8 @@
 
 **Cuándo usarlo:** para crear o editar un registro en
 `src/pages/freshii-admin/<carpeta>/_components/formulario.tsx`, montado desde
-`detalle.astro`. Antes hay que tener el [modelo](./modelo.md) y el
-[schema](./schema.md).
+`detalle.astro`. Antes hay que tener el [modelo](./02-modelo.md) y el
+[schema](./05-schema.md).
 
 ## Reglas
 
@@ -12,7 +12,7 @@
 - `id` sale de `?id=` en la URL. Si no hay `id`, es un alta; si hay, es una
   edición y se llama a `get(id)`.
 - Estado: `editando`. `cargando`, `obtenerPorId` y `guardar` salen de
-  `useRecurso(ModelClass)` (ver [componentes.md](./componentes.md)).
+  `useRecurso(ModelClass)` (ver [01-componentes.md](./01-componentes.md)).
 - `useForm<XFormData>` con `standardSchemaResolver(XSchema)`, y `defaultValues`
   con **todos** los campos (`""` para strings).
 - `get(id)`: `obtenerPorId(id, ModelClass.EXPAND.DEFAULT)` devuelve el registro
@@ -247,7 +247,7 @@ al renderizar.
 - Omitir `defaultValues`: el input pasa de no controlado a controlado y React
   avisa en consola.
 - Exigir en el schema campos que se ocultan al editar. Ver
-  [schema.md](./schema.md#evitar).
+  [05-schema.md](./05-schema.md#evitar).
 
 ## Referencias
 

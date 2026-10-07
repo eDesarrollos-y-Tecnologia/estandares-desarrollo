@@ -1,6 +1,6 @@
 # Formulario (`-components/formulario.tsx`)
 
-Archivo: `src/routes/(auth)/[modulo]/-components/formulario.tsx`. Lo renderiza `DetalleLayout` (ver [detalle.md](detalle.md)), que le pasa los datos y la función de guardado.
+Archivo: `src/routes/(auth)/[modulo]/-components/formulario.tsx`. Lo renderiza `DetalleLayout` (ver [03-detalle.md](03-detalle.md)), que le pasa los datos y la función de guardado.
 
 Referencias: `categorias/-components/formulario.tsx` (secciones en `Card`, switch, imagen), `administracion/permisos/-components/formulario.tsx` (`SelectorQuery`).
 

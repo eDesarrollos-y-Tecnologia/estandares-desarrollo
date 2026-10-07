@@ -17,37 +17,38 @@ backend/
 ```
 
 Cada stack tiene una guía de entrada con el índice de sus guías y el flujo paso
-a paso para las tareas más comunes (`README.md` en Astro, `creacionModulo.md` en
-React).
+a paso para las tareas más comunes (`README.md` en cada stack; en React el flujo
+completo está en `05-creacion-modulo.md`).
 
 ## Índice
 
 | Stack | Ubicación                                        | Estado     |
 | ----- | ------------------------------------------------ | ---------- |
 | Astro | [frontend/astro/](./frontend/astro/README.md)    | Disponible |
-| React | [frontend/react/](./frontend/react/creacionModulo.md) | Disponible |
+| React | [frontend/react/](./frontend/react/README.md) | Disponible |
 | PHP / Yii2 | [backend/](./backend/README.md)                | Disponible |
 
 ### Astro
 
 | Guía                                                  | Para qué                                                          |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
-| [modelo.md](./frontend/astro/modelo.md)               | Clases en `src/models/` (endpoints, expand, columnas)             |
-| [schema.md](./frontend/astro/schema.md)               | Validación Zod en `src/schemas/`                                  |
-| [componentes.md](./frontend/astro/componentes.md)     | Reglas generales de componentes React y llamadas a la API         |
-| [listado.md](./frontend/astro/listado.md)             | Vista índice del admin (`Tabla`, búsqueda, eliminar)              |
-| [formulario.md](./frontend/astro/formulario.md)       | Vista detalle/alta del admin (`react-hook-form` + shadcn `Field`) |
+| [02-modelo.md](./frontend/astro/02-modelo.md)               | Clases en `src/models/` (endpoints, expand, columnas)             |
+| [05-schema.md](./frontend/astro/05-schema.md)               | Validación Zod en `src/schemas/`                                  |
+| [01-componentes.md](./frontend/astro/01-componentes.md)     | Reglas generales de componentes React y llamadas a la API         |
+| [03-listado.md](./frontend/astro/03-listado.md)             | Vista índice del admin (`Tabla`, búsqueda, eliminar)              |
+| [04-formulario.md](./frontend/astro/04-formulario.md)       | Vista detalle/alta del admin (`react-hook-form` + shadcn `Field`) |
+| [06-directivas-client.md](./frontend/astro/06-directivas-client.md) | Directivas `client:*`, `<script>` y `<style>` en componentes Astro |
 
 ### React
 
 | Guía                                                        | Para qué                                                                |
 | ----------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [creacionModulo.md](./frontend/react/creacionModulo.md)     | Guía principal: pasos para crear un módulo CRUD completo               |
-| [general.md](./frontend/react/general.md)                   | Estructura del proyecto, aliases, estilos, menú y reglas de código      |
-| [modelos.md](./frontend/react/modelos.md)                   | Clases en `src/models/` (`ModeloBase`, endpoints, columnas, expand)     |
-| [index.md](./frontend/react/index.md)                       | Vista de listado `index.tsx` (`CrudHeader`, `TablaQuery`)               |
-| [detalle.md](./frontend/react/detalle.md)                   | Vista de alta/edición `detalle.tsx` (`DetalleLayout`, `usePagina`)      |
-| [formulario.md](./frontend/react/formulario.md)             | Formulario en `-components/` (`EdForm`, antd `Form.Item`, `SelectorQuery`) |
+| [05-creacion-modulo.md](./frontend/react/05-creacion-modulo.md)     | Guía principal: pasos para crear un módulo CRUD completo               |
+| [06-general.md](./frontend/react/06-general.md)                   | Estructura del proyecto, aliases, estilos, menú y reglas de código      |
+| [01-modelos.md](./frontend/react/01-modelos.md)                   | Clases en `src/models/` (`ModeloBase`, endpoints, columnas, expand)     |
+| [02-index.md](./frontend/react/02-index.md)                       | Vista de listado `index.tsx` (`CrudHeader`, `TablaQuery`)               |
+| [03-detalle.md](./frontend/react/03-detalle.md)                   | Vista de alta/edición `detalle.tsx` (`DetalleLayout`, `usePagina`)      |
+| [04-formulario.md](./frontend/react/04-formulario.md)             | Formulario en `-components/` (`EdForm`, antd `Form.Item`, `SelectorQuery`) |
 
 ## Formato de una guía
 

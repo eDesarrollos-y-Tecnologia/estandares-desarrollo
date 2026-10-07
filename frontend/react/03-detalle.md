@@ -7,7 +7,7 @@ Archivo: `src/routes/(auth)/[modulo]/detalle.tsx`. Una sola vista sirve para **a
 
 Referencia: `src/routes/(auth)/categorias/detalle.tsx`.
 
-El archivo solo conecta el modelo con `DetalleLayout`; los campos van en `-components/formulario.tsx` (ver [formulario.md](formulario.md)).
+El archivo solo conecta el modelo con `DetalleLayout`; los campos van en `-components/formulario.tsx` (ver [04-formulario.md](04-formulario.md)).
 
 ## Ejemplo completo
 
@@ -65,7 +65,7 @@ function RouteComponent() {
 | `handleVolver`, `queryParams`, `isEditando` | sí | Vienen de `usePagina()`. |
 | `nombreSingular`, `nombrePlural` | sí | Para títulos y botones. |
 | `queryProps` | sí | Consulta del registro: `endpoint`, `extraParams: { id, expand }`, `enabled: !!queryParams?.id` (solo consulta al editar). |
-| `Formulario` | normalmente | Componente del formulario. Recibe las props descritas en formulario.md. |
+| `Formulario` | normalmente | Componente del formulario. Recibe las props descritas en 04-formulario.md. |
 | `saveEndpoint` | no | Endpoint de guardado si es distinto de `queryProps.endpoint` (ej. `ModelClass.ENDPOINTS.GUARDAR`). |
 | `formQueryProps` | no | Se pasa al formulario como `queryProps`. |
 | `headerExtra` | no | Botones extra en el header, junto a "Volver". |

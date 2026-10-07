@@ -15,4 +15,4 @@ Proyectos React + TanStack Router + antd.
 
 - Entrada: [react/README.md](./react/README.md)
 - Para crear un módulo nuevo empezar por
-  [react/creacionModulo.md](./react/creacionModulo.md)
+  [react/05-creacion-modulo.md](./react/05-creacion-modulo.md)

@@ -4,8 +4,8 @@
 
 | Ruta | Contenido |
 |---|---|
-| `src/models/` | Modelos (`Nombre.model.ts`). Ver [modelos.md](modelos.md). |
-| `src/routes/(auth)/` | Vistas privadas. Una carpeta por módulo. Ver [creacionModulo.md](creacionModulo.md). |
+| `src/models/` | Modelos (`Nombre.model.ts`). Ver [01-modelos.md](01-modelos.md). |
+| `src/routes/(auth)/` | Vistas privadas. Una carpeta por módulo. Ver [05-creacion-modulo.md](05-creacion-modulo.md). |
 | `src/routes/(public)/` | Vistas públicas. |
 | `src/routes/**/-components/` | Componentes propios de un módulo (no son rutas). |
 | `src/components/` | Componentes compartidos de la app (`utils/`, `dashboard/`...). |
@@ -43,4 +43,4 @@ Aliases: `@/` = `src/`, `@base/` = `base/`. Usarlos siempre en lugar de rutas re
 
 ## Otros
 
-- Las plantillas de `base/scripts/templates/modelo/` (interface + hook) son de una versión anterior y no se usan. Para modelos seguir [modelos.md](modelos.md).
+- Las plantillas de `base/scripts/templates/modelo/` (interface + hook) son de una versión anterior y no se usan. Para modelos seguir [01-modelos.md](01-modelos.md).

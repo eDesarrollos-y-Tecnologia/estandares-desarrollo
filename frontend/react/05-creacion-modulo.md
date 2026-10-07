@@ -9,15 +9,15 @@ Módulo de referencia: `src/routes/(auth)/categorias/` + `src/models/Categoria.m
 ```
 src/
 ├── models/
-│   └── Marca.model.ts                 → modelo (ver modelos.md)
+│   └── Marca.model.ts                 → modelo (ver 01-modelos.md)
 └── routes/
     └── (auth)/                        → rutas privadas (requieren sesión)
         └── [grupo]/                   → opcional, ej. catalogos/, administracion/
             └── marcas/                → carpeta del módulo
-                ├── index.tsx          → listado (ver index.md)
-                ├── detalle.tsx        → alta / edición (ver detalle.md)
+                ├── index.tsx          → listado (ver 02-index.md)
+                ├── detalle.tsx        → alta / edición (ver 03-detalle.md)
                 └── -components/
-                    ├── formulario.tsx → formulario (ver formulario.md)
+                    ├── formulario.tsx → formulario (ver 04-formulario.md)
                     └── ...            → secciones extraídas de index/detalle/formulario
 ```
 
@@ -37,11 +37,11 @@ src/
 
 ## 3. Pasos
 
-1. **Modelo** → crear `src/models/Marca.model.ts`. Ver [modelos.md](modelos.md).
+1. **Modelo** → crear `src/models/Marca.model.ts`. Ver [01-modelos.md](01-modelos.md).
 2. **Carpeta** → crear `src/routes/(auth)/marcas/` y `-components/`.
-3. **Listado** → crear `index.tsx`. Ver [index.md](index.md).
-4. **Detalle** → crear `detalle.tsx`. Ver [detalle.md](detalle.md).
-5. **Formulario** → crear `-components/formulario.tsx`. Ver [formulario.md](formulario.md).
+3. **Listado** → crear `index.tsx`. Ver [02-index.md](02-index.md).
+4. **Detalle** → crear `detalle.tsx`. Ver [03-detalle.md](03-detalle.md).
+5. **Formulario** → crear `-components/formulario.tsx`. Ver [04-formulario.md](04-formulario.md).
 6. **Menú** → agregar la entrada en `src/localMenuItems.gen.ts` (siempre con icono acorde, iconify `lucide:*`):
    ```ts
    {
@@ -88,4 +88,4 @@ Aliases: `@/` = `src/`, `@base/` = `base/`.
 - [ ] Ningún archivo pasa de 600 líneas.
 - [ ] `pnpm lint` y `pnpm build` sin errores.
 
-Reglas generales del proyecto: [general.md](general.md).
+Reglas generales del proyecto: [06-general.md](06-general.md).

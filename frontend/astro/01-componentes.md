@@ -2,7 +2,7 @@
 
 **Cuándo usarlo:** en cualquier componente `.tsx` (islas del admin, bloques del
 sitio público). Para listados y formularios CRUD, ver además
-[listado.md](./listado.md) y [formulario.md](./formulario.md).
+[03-listado.md](./03-listado.md) y [04-formulario.md](./04-formulario.md).
 
 ## Reglas
 
