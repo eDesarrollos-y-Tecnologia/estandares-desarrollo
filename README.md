@@ -12,7 +12,8 @@ frontend/
   astro/   → proyectos Astro con islas React (admin + sitio público)
   react/   → proyectos React (pendiente)
 backend/
-  php/     → API en PHP (pendiente)
+  yii2-app-ed/ → plantilla de aplicaciones Yii2
+  yii2-ed/     → librería Yii2 compartida
 ```
 
 Cada stack tiene su propio `README.md` con el índice de sus guías y el flujo
@@ -24,7 +25,7 @@ paso a paso para las tareas más comunes.
 | ----- | ------------------------------------------------ | ---------- |
 | Astro | [frontend/astro/](./frontend/astro/README.md)    | Disponible |
 | React | `frontend/react/`                                | Pendiente  |
-| PHP   | `backend/php/`                                   | Pendiente  |
+| PHP / Yii2 | [backend/](./backend/README.md)                | Disponible |
 
 ### Astro
 
@@ -48,8 +49,10 @@ Todas las guías siguen la misma estructura:
 
 ## Agregar o cambiar una guía
 
-1. Crea el archivo en `<capa>/<stack>/` (ej. `backend/php/controlador.md`), en
-   minúsculas y con el nombre del concepto que documenta.
+1. Crea el archivo en `<capa>/<stack>/` (ej.
+   `backend/yii2-app-ed/01-controlador.md`), en minúsculas y con el nombre del
+   concepto. Cuando el índice tenga un orden deliberado, usa el prefijo numérico
+   de dos dígitos.
 2. Sigue el [formato](#formato-de-una-guía).
 3. Agrégala a la tabla del `README.md` del stack y, si es un stack nuevo, a la
    tabla de [Índice](#índice) de este archivo.
