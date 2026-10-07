@@ -7,7 +7,7 @@ Antes de publicar o aprobar un cambio en `yii2-ed`.
 ## Reglas
 
 - Revisar consumidores y contrato público, no sólo el caso local.
-- Evaluar compatibilidad, dependencias, documentación, versión y pruebas.
+- Evaluar compatibilidad, dependencias, documentación, versión y verificación.
 - El código generado por IA no tiene excepción de revisión.
 
 ## Plantilla
@@ -18,7 +18,7 @@ Antes de publicar o aprobar un cambio en `yii2-ed`.
 - [ ] Se documentó la API, formato o configuración modificados.
 - [ ] Las dependencias nuevas están justificadas.
 - [ ] La versión Composer comunica el impacto.
-- [ ] Se ejecutaron pruebas focalizadas y validación del paquete.
+- [ ] Se validó el paquete y, cuando existe, un consumidor representativo.
 ~~~
 
 ## Evitar
@@ -31,4 +31,3 @@ Antes de publicar o aprobar un cambio en `yii2-ed`.
 
 - [02-convenciones-arquitectura.md](./02-convenciones-arquitectura.md)
 - [06-excepciones.md](./06-excepciones.md)
-

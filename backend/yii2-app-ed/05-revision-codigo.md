@@ -7,7 +7,8 @@ Antes de solicitar o aprobar un pull request de una aplicación.
 ## Reglas
 
 - El código generado por IA se revisa con los mismos criterios.
-- Revisar alcance, arquitectura, validación, seguridad, migraciones y pruebas.
+- Revisar alcance, arquitectura, validación, seguridad, migraciones y
+  verificación funcional.
 - Documentar excepciones antes de aprobarlas.
 
 ## Plantilla
@@ -18,7 +19,7 @@ Antes de solicitar o aprobar un pull request de una aplicación.
 - [ ] No se duplicó autenticación ni respuesta.
 - [ ] La migración preserva datos e índices justificados.
 - [ ] No hay secretos, SQL inseguro ni logs sensibles.
-- [ ] OpenAPI y pruebas se actualizaron si aplican.
+- [ ] OpenAPI se actualizó si aplica y el flujo afectado fue verificado.
 ~~~
 
 ## Evitar
@@ -31,4 +32,3 @@ Antes de solicitar o aprobar un pull request de una aplicación.
 
 - [02-convenciones-arquitectura.md](./02-convenciones-arquitectura.md)
 - [06-excepciones.md](./06-excepciones.md)
-
