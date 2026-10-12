@@ -12,6 +12,11 @@ reutilizable.
 | [04-desarrollo-funcionalidades.md](./04-desarrollo-funcionalidades.md) | Procedimiento para entregar una funcionalidad. |
 | [05-revision-codigo.md](./05-revision-codigo.md) | Lista de revisión antes y durante un cambio. |
 | [06-excepciones.md](./06-excepciones.md) | Excepciones, deuda técnica y decisiones. |
+| [07-modelo.md](./07-modelo.md) | Modelo ActiveRecord completo, relaciones y serialización. |
+| [08-controlador-crud.md](./08-controlador-crud.md) | Controlador que hereda el CRUD estándar. |
+| [09-controlador-personalizado.md](./09-controlador-personalizado.md) | Sobrecarga de `buscador()` con filtros propios. |
+| [10-modulo.md](./10-modulo.md) | Creación y registro de un módulo Yii2. |
+| [11-correo.md](./11-correo.md) | SMTP, módulo de correo, layout y procesamiento programado. |
 
 ## Regla de alcance
 
