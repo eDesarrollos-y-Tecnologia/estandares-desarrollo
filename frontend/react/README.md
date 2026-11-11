@@ -11,6 +11,7 @@ Empezar por [05-creacion-modulo.md](./05-creacion-modulo.md); cada paso enlaza a
 | [02-index.md](./02-index.md)                   | Vista de listado (`TablaQuery`, búsqueda, paginación, eliminar)      |
 | [03-detalle.md](./03-detalle.md)               | Vista de alta/edición (`DetalleLayout`, `usePagina`)                 |
 | [04-formulario.md](./04-formulario.md)         | Formulario del módulo (`EdForm`, validaciones, `SelectorQuery`)      |
+| [08-archivos.md](./08-archivos.md)             | Dónde va cada tipo de archivo y qué no debe ir en cada carpeta       |
 
 ## Crear un módulo nuevo
 
