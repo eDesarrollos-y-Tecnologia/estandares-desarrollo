@@ -85,4 +85,4 @@ const get = useCallback(async () => {
 
 - `src/hooks/useRecurso.ts`
 - `src/services/httpService.ts` (`http`, `HttpService.getMensajeError`)
-- `src/pages/freshii-admin/permisos/_components/`
+- `src/pages/ed-admin/permisos/_components/`
