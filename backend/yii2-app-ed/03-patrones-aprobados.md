@@ -13,6 +13,48 @@ Antes de introducir una estructura adicional para resolver un caso de aplicació
 - Usar módulos Yii para separar rutas de API.
 - `Service`, `Repository`, Factory, DTO y eventos no son patrones aprobados.
 
+## Regla: definición de permisos
+
+Los permisos son constantes del dominio de la aplicación. No se escriben como
+literales en controladores, modelos, migraciones ni frontend.
+
+- Crear un módulo `MENU` para permisos de navegación. Sus claves comienzan con
+  `MENU_`, por ejemplo `MENU_ADMINISTRACION` y
+  `MENU_ADMINISTRACION_USUARIO`.
+- Crear un módulo por recurso de negocio, por ejemplo `USUARIO`, `PERMISO` o
+  `GRUPO`.
+- Definir un permiso por acción del recurso con el formato
+  `<RECURSO>_<ACCION>`: `USUARIO_CREAR`, `USUARIO_EDITAR` y
+  `USUARIO_ELIMINAR`.
+- Declarar las mismas claves en constantes PHP y TypeScript. La migración
+  inserta los módulos y permisos iniciales usando las constantes PHP.
+- Un usuario obtiene permisos efectivos por unión de sus permisos directos y
+  los concedidos por todos sus grupos. Los grupos solo conceden permisos; no
+  los niegan.
+
+Plantilla de constantes:
+
+~~~php
+class Modulo extends ModeloBase {
+  public const MENU = 'MENU';
+  public const USUARIO = 'USUARIO';
+}
+
+class Permiso extends ModeloBase {
+  public const MENU_ADMINISTRACION_USUARIO = 'MENU_ADMINISTRACION_USUARIO';
+  public const USUARIO_CREAR = 'USUARIO_CREAR';
+  public const USUARIO_EDITAR = 'USUARIO_EDITAR';
+  public const USUARIO_ELIMINAR = 'USUARIO_ELIMINAR';
+}
+~~~
+
+~~~ts
+Permiso.MENU.ADMINISTRACION_USUARIO
+Permiso.USUARIO.CREAR
+Permiso.USUARIO.EDITAR
+Permiso.USUARIO.ELIMINAR
+~~~
+
 ## Plantilla
 
 Extensión real de `yii2-app-ed/modelos/ModeloBase.php`:
