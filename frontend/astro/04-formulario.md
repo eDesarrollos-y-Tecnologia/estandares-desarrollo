@@ -1,7 +1,7 @@
 # Formulario (detalle / alta)
 
 **Cuándo usarlo:** para crear o editar un registro en
-`src/pages/freshii-admin/<carpeta>/_components/formulario.tsx`, montado desde
+`src/pages/ed-admin/<carpeta>/_components/formulario.tsx`, montado desde
 `detalle.astro`. Antes hay que tener el [modelo](./02-modelo.md) y el
 [schema](./05-schema.md).
 
@@ -221,8 +221,8 @@ import AdminLayout from "@/layouts/AdminLayout.astro";
 import DetalleServicio from "./_components/formulario";
 
 const breadcrumbs = [
-  { label: "Inicio", href: "/freshii-admin/" },
-  { label: "Servicios", href: "/freshii-admin/servicio" },
+  { label: "Inicio", href: "/ed-admin/" },
+  { label: "Servicios", href: "/ed-admin/servicio" },
   { label: "Detalle" },
 ];
 ---
@@ -237,7 +237,7 @@ al renderizar.
 
 ## Evitar
 
-- Rutas escritas a mano (`navigate("/freshii-admin/modulos")`): se usa
+- Rutas escritas a mano (`navigate("/ed-admin/modulos")`): se usa
   `ModelClass.BASE_ROUTE`.
 - Comparar con `id !== "nuevo"` (lo hace `modulos`): cuando es alta, simplemente
   no hay `id`.
@@ -252,8 +252,8 @@ al renderizar.
 ## Referencias
 
 - `src/hooks/useRecurso.ts`
-- `src/pages/freshii-admin/permisos/_components/formulario.tsx` (patrón base,
+- `src/pages/ed-admin/permisos/_components/formulario.tsx` (patrón base,
   `QuerySelector`)
-- `src/pages/freshii-admin/usuarios/_components/formulario.tsx` (secciones en
+- `src/pages/ed-admin/usuarios/_components/formulario.tsx` (secciones en
   `Card`, `Select`, `Switch`, contraseña)
 - `src/components/QuerySelector.tsx`, `src/components/ui/field.tsx`

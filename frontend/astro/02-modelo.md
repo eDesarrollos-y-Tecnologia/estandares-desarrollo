@@ -11,8 +11,8 @@
   luego los campos y al final las relaciones tipadas con `import type`.
 - `CLASS_NAME`: nombre legible de la clase, separado con espacios. Se usa en
   títulos de la UI (`"Servicio Media"`).
-- `BASE_ROUTE`: ruta de la carpeta del admin, `"/freshii-admin/<carpeta>"` (ej.
-  `"/freshii-admin/permisos"`). `Tabla` y los formularios navegan con este
+- `BASE_ROUTE`: ruta de la carpeta del admin, `"/ed-admin/<carpeta>"` (ej.
+  `"/ed-admin/permisos"`). `Tabla` y los formularios navegan con este
   valor.
 - `ENDPOINTS.DEFAULT`: `"v1/<kebab-case>.json"` (ej. `v1/servicio-media.json`).
   Si el sitio público consulta la entidad, se agrega
@@ -49,7 +49,7 @@ export class Cita extends ModeloBase {
   empleado?: Empleado;
 
   static CLASS_NAME = "Cita";
-  static BASE_ROUTE = "/freshii-admin/cita";
+  static BASE_ROUTE = "/ed-admin/cita";
 
   static ENDPOINTS = {
     DEFAULT: "v1/cita.json",
@@ -97,7 +97,7 @@ export class Cita extends ModeloBase {
 
 - Escribir endpoints o rutas directamente en los componentes. Siempre se usan
   `Modelo.ENDPOINTS` / `Modelo.BASE_ROUTE`.
-- Poner `BASE_ROUTE = "/<modelo>"` sin el prefijo `/freshii-admin`.
+- Poner `BASE_ROUTE = "/<modelo>"` sin el prefijo `/ed-admin`.
 - Propiedades obligatorias (sin `?`): rompen `Partial<T>` y `form.reset`.
 
 ## Referencias

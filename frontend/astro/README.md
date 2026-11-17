@@ -16,10 +16,10 @@ estructura: **Cuándo usarlo → Reglas → Plantilla → Evitar → Referencias
 
 1. **Modelo**: `src/models/<Nombre>.model.ts` → [02-modelo.md](./02-modelo.md)
 2. **Schema**: `src/schemas/<Nombre>Schema.ts` → [05-schema.md](./05-schema.md)
-3. **Listado**: `src/pages/freshii-admin/<carpeta>/_components/index.tsx` +
+3. **Listado**: `src/pages/ed-admin/<carpeta>/_components/index.tsx` +
    `index.astro` → [03-listado.md](./03-listado.md)
 4. **Formulario**:
-   `src/pages/freshii-admin/<carpeta>/_components/formulario.tsx` +
+   `src/pages/ed-admin/<carpeta>/_components/formulario.tsx` +
    `detalle.astro` → [04-formulario.md](./04-formulario.md)
 5. **Menú**: agregar la entrada en `src/components/base/app-sidebar.tsx`
 6. Verificar con `pnpm astro check`

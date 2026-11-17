@@ -1,7 +1,7 @@
 # Listado (tabla CRUD)
 
 **Cuándo usarlo:** para la vista índice de un recurso, en
-`src/pages/freshii-admin/<carpeta>/_components/index.tsx`, montado desde
+`src/pages/ed-admin/<carpeta>/_components/index.tsx`, montado desde
 `index.astro`.
 
 ## Reglas
@@ -148,8 +148,8 @@ import AdminLayout from "@/layouts/AdminLayout.astro";
 import ServicioIndex from "./_components/index";
 
 const breadcrumbs = [
-  { label: "Inicio", href: "/freshii-admin/" },
-  { label: "Servicios", href: "/freshii-admin/servicio" },
+  { label: "Inicio", href: "/ed-admin/" },
+  { label: "Servicios", href: "/ed-admin/servicio" },
 ];
 ---
 
@@ -174,7 +174,7 @@ Para que aparezca en el menú hay que agregar la entrada
 
 ## Referencias
 
-- `src/pages/freshii-admin/permisos/_components/index.tsx` (patrón base con
+- `src/pages/ed-admin/permisos/_components/index.tsx` (patrón base con
   filtro)
 - `src/hooks/useRecurso.ts`
 - `src/components/Tabla.tsx`, `src/components/Buscador.tsx`,
