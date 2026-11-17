@@ -22,6 +22,10 @@ Al crear un modelo, endpoint, módulo, comando o migración en `yii2-app-ed`.
   `modificado` y `eliminado`.
 - En PostgreSQL usar `defaultExpression('CURRENT_TIMESTAMP')`, no sintaxis de
   MySQL como `ON UPDATE CURRENT_TIMESTAMP`.
+- Las columnas `json` y `jsonb` se asignan como arreglos u objetos PHP. Los
+  modelos ActiveRecord se usan al leerlas para que Yii conserve su tipo nativo.
+- La bitácora de aplicación usa tablas propias y componentes configurados en
+  `config/`; sus modelos de lectura desactivan la bitácora para evitar un ciclo.
 - Una migración debe poder aplicarse y revertirse con seguridad; no transformar
   ni eliminar datos sin autorización y respaldo verificable.
 - Lo reutilizable por dos o más aplicaciones se propone para `yii2-ed`.
@@ -78,6 +82,8 @@ class m260101_000000_crear_producto extends \yii\db\Migration {
 - Crear `Service`, `Repository` o DTO sin propuesta aprobada.
 - Sobrescribir CRUD base si `modelClass` o `buscador()` bastan.
 - Mover dominio de cliente a `yii2-ed`.
+- Consultar una bitácora JSON con `Query` crudo si la respuesta debe conservar
+  arreglos u objetos; usar ActiveRecord o un mapeo de tipos equivalente.
 
 ## Referencias
 

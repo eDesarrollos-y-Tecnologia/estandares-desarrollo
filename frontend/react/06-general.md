@@ -11,6 +11,12 @@ Aliases: `@/` = `src/`, `@base/` = `base/`. Usarlos siempre en lugar de rutas re
 - Solo existe un archivo CSS: `src/global.css`. No crear otros.
 - Estilos de componentes con Tailwind; usar CSS en `global.css` solo si Tailwind no alcanza.
 - Colores y tema de antd: `src/config/settings/antd-config-provider.tsx`. Para personalización mayor, `src/global.css`.
+- Si el sistema permite configurar marca, tomar título, logo y colores desde
+  `useConfiguracion`; aplicar los tokens de color al `ConfigProvider`, layout y
+  login. No dejar botones o menú con colores fijos ajenos a la configuración.
+- Los colores configurables se validan en backend como hexadecimal `#RRGGBB`.
+  La interfaz sólo consume la configuración pública y conserva valores
+  predeterminados seguros mientras carga.
 
 ## Tamaño y organización de archivos
 

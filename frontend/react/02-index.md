@@ -227,6 +227,51 @@ Props útiles:
 | `TablaQuery` | `wrapInCard` | `false` para no envolver en `Card`. |
 | `TablaQuery` | `tableProps` | Props directas de `Table` de antd (ej. `scroll`). |
 
+## 6. Listados con `ProTablaQuery`
+
+Para módulos nuevos usar `ProTablaQuery` de `@e-desarrollos/react-core`. Incluye
+consulta, paginación, configuración de columnas, recarga, importación,
+exportación y los modos Grid y Tarjetas. Usar una `storageKey` estable para
+conservar la vista elegida por módulo.
+
+~~~tsx
+<ProTablaQuery
+  columns={columnas}
+  queryProps={{
+    endpoint: ModelClass.ENDPOINTS.DEFAULT,
+    extraParams: requestParams,
+  }}
+  setRequestParams={setRequestParams}
+  showSearch
+  opciones={{
+    configuracion: true,
+    recargar: true,
+  }}
+  storageKey="catalogos-productos"
+/>
+~~~
+
+`ProTablaQuery` usa `ProTable`. En una columna personalizada, el primer
+argumento de `render` es el nodo visual predeterminado; el registro es el
+segundo argumento. Tomar el dato desde el registro evita intentar formatear un
+nodo React como si fuera JSON.
+
+~~~tsx
+{
+  key: "cambios",
+  title: "Cambios",
+  render: (_nodo, registro) => (
+    <Button onClick={() => abrirVistaPrevia(registro)}>
+      Ver cambios
+    </Button>
+  ),
+}
+~~~
+
+Para valores estructurados, mantener la tabla compacta y abrir un modal de
+detalle que presente Antes y Después por atributo. No mostrar objetos mediante
+`String(valor)`, porque pierde su contenido.
+
 ## Checklist
 
 - [ ] Ruta `createFileRoute("/(auth)/modulo/")` con `PaginaProvider`.
@@ -235,3 +280,5 @@ Props útiles:
 - [ ] Eliminar refresca la tabla con `timestamp`.
 - [ ] `expand` y `...requestParams` en `extraParams`.
 - [ ] Menos de 600 líneas.
+- [ ] En `ProTablaQuery`, los renders personalizados leen el valor desde el
+  segundo argumento (`registro`).

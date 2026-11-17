@@ -20,6 +20,12 @@ Antes de solicitar o aprobar un pull request de una aplicación.
 - [ ] La migración preserva datos e índices justificados.
 - [ ] No hay secretos, SQL inseguro ni logs sensibles.
 - [ ] OpenAPI se actualizó si aplica y el flujo afectado fue verificado.
+- [ ] Las columnas JSON se responden como objetos o arreglos, no como JSON
+  serializado dentro de un string.
+- [ ] Una nueva bitácora tiene migración, permiso de visor y exclusión de su
+  propia auditoría.
+- [ ] TOTP no expone su semilla, exige confirmación para activarse y requiere
+  un código vigente para desactivarse.
 ~~~
 
 ## Evitar

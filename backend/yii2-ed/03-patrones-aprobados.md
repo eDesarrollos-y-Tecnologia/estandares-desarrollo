@@ -9,7 +9,42 @@ Antes de crear una abstracción reutilizable dentro de `yii2-ed`.
 - Los controladores REST base centralizan formatos, paginación y respuesta.
 - `ModeloBase` contiene comportamiento ActiveRecord transversal.
 - Los formateadores representan una misma respuesta en varios formatos.
+- La importación parte del archivo exportado por el mismo modelo; el modelo
+  decide cómo encontrar o crear la instancia que recibirá cada fila.
+- La bitácora de cambios y de peticiones se integra como componente Yii, no se
+  repite con eventos en cada entidad del dominio.
 - Repository, Service, Factory, DTO y un contenedor propio no están aprobados.
+
+## Regla: importación de registros
+
+`ModeloBase::resolverModeloImportacion(array $fila)` es el punto de extensión
+para una importación XLSX. La implementación predeterminada busca una llave
+primaria simple cuando viene en la fila y, si no existe, regresa una instancia
+nueva. Un modelo puede reemplazarlo para usar una llave natural o compuesta.
+
+~~~php
+public static function resolverModeloImportacion(array $fila) {
+  $correo = trim((string)($fila['correo'] ?? ''));
+  $modelo = $correo === '' ? null : static::findOne(['correo' => $correo]);
+
+  return $modelo ?? new static();
+}
+~~~
+
+No se exige una columna `id` si el dominio puede resolver una entidad con otro
+criterio. La misma hoja exportada debe ser válida como plantilla de importación.
+
+## Regla: bitácora transversal
+
+`ModeloBase` notifica a `bitacoraCambio` tras guardar o eliminar. La aplicación
+decide si registra cada modelo mediante `bitacoraHabilitada()`; los modelos que
+almacenan la propia bitácora deben devolver `false` para evitar recursión.
+
+- Guardar sólo atributos modificados en actualizaciones.
+- Omitir contraseñas, tokens, semillas TOTP y atributos sensibles.
+- No asumir que hay petición HTTP al ejecutar comandos de consola.
+- Usar arreglos y objetos nativos para columnas `json` o `jsonb`; el driver de
+  PostgreSQL realiza la conversión correspondiente.
 
 ## Plantilla
 

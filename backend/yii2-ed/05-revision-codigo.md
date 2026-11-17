@@ -19,6 +19,10 @@ Antes de publicar o aprobar un cambio en `yii2-ed`.
 - [ ] Las dependencias nuevas están justificadas.
 - [ ] La versión Composer comunica el impacto.
 - [ ] Se validó el paquete y, cuando existe, un consumidor representativo.
+- [ ] Una importación puede resolver actualización o alta sin forzar una llave
+  primaria cuando el modelo tiene una llave natural.
+- [ ] La bitácora no contiene valores sensibles, no bloquea la entidad y no
+  registra cambios revertidos por una transacción.
 ~~~
 
 ## Evitar

@@ -32,6 +32,43 @@ literales en controladores, modelos, migraciones ni frontend.
   los concedidos por todos sus grupos. Los grupos solo conceden permisos; no
   los niegan.
 
+Un controlador puede declarar uno o varios permisos válidos para una acción.
+La evaluación acepta la acción cuando el usuario tiene cualquiera de los
+permisos declarados; no se repite esa lógica dentro de la acción.
+
+~~~php
+public $permisosAccion = [
+  'index' => [Permiso::USUARIO_EDITAR, Permiso::USUARIO_VER],
+];
+~~~
+
+## Regla: bitácoras administrativas
+
+Una aplicación que habilita bitácoras crea las tablas de cambios y peticiones
+en una migración propia, registra los componentes de `yii2-ed` en su
+configuración y protege el visor con un permiso de administración específico.
+
+- La bitácora de peticiones se limita a HTTP; los comandos no tienen IP ni
+  encabezados de petición.
+- La bitácora de cambios se registra después de confirmar la transacción.
+- El visor es de sólo lectura y sus modelos devuelven
+  `bitacoraHabilitada(): bool` con `false`.
+
+## Regla: autenticación de dos pasos (TOTP)
+
+La semilla TOTP pertenece al usuario autenticado y nunca se expone dentro de
+`fields()` ni en la respuesta de inicio de sesión.
+
+1. La configuración genera una semilla y devuelve la URI `otpauth` sólo para
+   incorporarla en la aplicación autenticadora.
+2. El usuario confirma un código válido antes de activar TOTP.
+3. El inicio de sesión solicita `codigoTotp` sólo después de validar correo y
+   contraseña cuando `totpActivo` es verdadero.
+4. Desactivar TOTP exige un código vigente y elimina la semilla.
+
+No marcar TOTP como activo al generar la semilla ni aceptar un código sin haber
+validado primero las credenciales primarias.
+
 Plantilla de constantes:
 
 ~~~php

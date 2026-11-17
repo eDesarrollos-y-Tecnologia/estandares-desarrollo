@@ -9,6 +9,12 @@ formatos, correo, cron u OpenAPI de `yii2-ed`.
 
 - El núcleo contiene infraestructura útil para dos o más aplicaciones.
 - Respuesta, rutas, serialización y clases base son contratos públicos.
+- `ModeloBase` concentra extensiones transversales de persistencia, como la
+  resolución de importaciones y la programación de auditoría.
+- Los componentes de bitácora son opcionales: si una bitácora falla, nunca
+  deben impedir que la entidad principal se guarde o elimine.
+- La auditoría de un cambio dentro de una transacción se registra después del
+  commit; un rollback no debe dejar una entrada de auditoría.
 - Dominio, migraciones, permisos y configuración de cliente permanecen en su
   aplicación.
 - Un cambio incompatible requiere versión mayor y guía de migración.
@@ -38,6 +44,8 @@ public function beforeAction($action) {
 - Copiar autenticación Bearer dentro de acciones individuales.
 - Resolver una necesidad de un cliente cambiando la librería.
 - Publicar una dependencia interna como contrato sin necesidad.
+- Codificar a mano arreglos para columnas JSON de PostgreSQL cuando el esquema
+  puede convertirlos de forma nativa.
 
 ## Referencias
 
